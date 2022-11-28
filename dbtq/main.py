@@ -34,7 +34,7 @@ def query(
     # get dbt profile info
     home = expanduser("~")
     with open(f"{home}/.dbt/profiles.yml", "r") as f:
-        profile_yaml = yaml.safe_load(f)
+         profile_yaml = yaml.safe_load(f)
     profiles = list(profile_yaml.keys())
     db_config = profile_yaml[profile or profiles[0]]
     target = db_config["target"]
